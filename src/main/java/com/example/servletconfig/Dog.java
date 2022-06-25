@@ -1,11 +1,20 @@
 package com.example.servletconfig;
 
-public class Dog {
+import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.HttpSessionBindingListener;
+
+public class Dog implements HttpSessionBindingListener {
     private String breed;
     public Dog(String breed) {
-        this.breed = breed;
+        this.breed=breed;
     }
     public String getBreed() {
         return breed;
+    }
+    public void valueBound(HttpSessionBindingEvent event) {
+        // code to run now that I know I’m in a session
+    }
+    public void valueUnbound(HttpSessionBindingEvent event) {
+        // code to run now that I know I am no longer part of a session
     }
 }
