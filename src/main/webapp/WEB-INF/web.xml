@@ -19,4 +19,25 @@
         <param-name>adminEmail</param-name>
         <param-value>likewecare@wickedlysmart.com</param-value>
     </context-param>
+
+
+    <servlet>
+        <servlet-name>ListenerTester</servlet-name>
+        <servlet-class>com.example.servletconfig.ListenerTester</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListenerTester</servlet-name>
+        <url-pattern>/ListenTest.do</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>Great Dane</param-value>
+    </context-param>
+    <listener>
+        <listener-class>
+            com.example.servletconfig.MyServletContextListener
+        </listener-class>
+    </listener>
 </web-app>
