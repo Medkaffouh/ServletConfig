@@ -40,4 +40,20 @@
             com.example.servletconfig.MyServletContextListener
         </listener-class>
     </listener>
+    <!--
+    The “15” is in minutes. This says if
+    the client doesn’t make any requests
+    on this session for 15 minutes, kill it.
+    -->
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+
+
+    <!--
+    Three ways a session can die:
+    -> It times out
+    -> You call invalidate() on the session object
+    -> The application goes down (crashes or is undeployed )
+    -->
 </web-app>
