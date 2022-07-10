@@ -11,6 +11,7 @@ public class pre_existing_session_Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
+
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("test sessions<br>");
